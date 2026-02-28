@@ -1,0 +1,30 @@
+<div class="player-crud-container">
+  <h2>Registro de Nuevo Jugador</h2>
+  <form>
+    <label>Nombre:
+      <input type="text" name="name" />
+    </label>
+    <label>Posición:
+      <input type="text" name="position" />
+    </label>
+    <label>Jersey:
+      <input type="text" name="jersey" />
+    </label>
+    <label>Talla del jersey:
+      <input type="text" name="jerseySize" />
+    </label>
+    <label>Fecha de nacimiento:
+      <input type="date" name="birthDate" />
+    </label>
+    <label>Fecha de ingreso:
+      <input type="date" name="joinDate" />
+    </label>
+    <label>Foto:
+      <input type="url" name="photo" placeholder="URL de la foto" />
+    </label>
+    <div class="crud-actions">
+      <button type="submit">Guardar</button>
+      <button type="button" (click)="goBack()">Cancelar</button>
+    </div>
+  </form>
+</div>

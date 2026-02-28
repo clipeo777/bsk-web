@@ -1,0 +1,68 @@
+<div class="players-module-layout">
+  <div class="sidebar-filter">
+    <h3>Buscar jugador</h3>
+    <form>
+      <label>Nombre:
+        <input type="text" name="searchName" />
+      </label>
+      <label>Posición:
+        <input type="text" name="searchPosition" />
+      </label>
+      <label>Jersey:
+        <input type="text" name="searchJersey" />
+      </label>
+      <label>Fecha de ingreso:
+        <input type="date" name="searchJoinDate" />
+      </label>
+      <button type="submit">Filtrar</button>
+    </form>
+  </div>
+  <div class="main-content">
+    <div class="header">
+      <button class="new-btn" [routerLink]="['/player-crud']">Nuevo</button>
+    </div>
+    <table class="players-table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Posición</th>
+          <th>Jersey</th>
+          <th>Fecha de ingreso</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a [routerLink]="['/player', 1]">Juan Pérez</a></td>
+          <td>Base</td>
+          <td>10</td>
+          <td>2023-01-15</td>
+          <td>
+            <button class="icon-btn" [routerLink]="['/player-crud']" title="Editar"><i class="fa-solid fa-pen-to-square"></i></button>
+            <button class="icon-btn" title="Eliminar" (click)="confirmDelete('Juan Pérez')"><i class="fa-solid fa-trash"></i></button>
+          </td>
+        </tr>
+        <tr>
+          <td><a [routerLink]="['/player', 2]">Carlos Gómez</a></td>
+          <td>Escolta</td>
+          <td>7</td>
+          <td>2022-09-10</td>
+          <td>
+            <button class="icon-btn" [routerLink]="['/player-crud']" title="Editar"><i class="fa-solid fa-pen-to-square"></i></button>
+            <button class="icon-btn" title="Eliminar" (click)="confirmDelete('Carlos Gómez')"><i class="fa-solid fa-trash"></i></button>
+          </td>
+        </tr>
+        <tr>
+          <td><a [routerLink]="['/player', 3]">Mario Ruiz</a></td>
+          <td>Pívot</td>
+          <td>15</td>
+          <td>2021-05-22</td>
+          <td>
+            <button class="icon-btn" [routerLink]="['/player-crud']" title="Editar"><i class="fa-solid fa-pen-to-square"></i></button>
+            <button class="icon-btn" title="Eliminar" (click)="confirmDelete('Mario Ruiz')"><i class="fa-solid fa-trash"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

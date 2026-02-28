@@ -1,0 +1,17 @@
+<div class="player-view-container" *ngIf="player">
+  <h2>Detalle del Jugador</h2>
+  <div class="player-info">
+    <img [src]="player.photo" alt="Foto del jugador" class="player-photo" />
+    <div class="player-data">
+      <p><strong>Nombre:</strong> {{ player.name }}</p>
+      <p><strong>Posición:</strong> {{ player.position }}</p>
+      <p><strong>Jersey:</strong> {{ player.jersey }}</p>
+      <p><strong>Talla del jersey:</strong> {{ player.jerseySize }}</p>
+      <p><strong>Fecha de nacimiento:</strong> {{ player.birthDate }}</p>
+      <p><strong>Fecha de ingreso:</strong> {{ player.joinDate }}</p>
+    </div>
+  </div>
+</div>
+<div *ngIf="!player">
+  <p>Jugador no encontrado.</p>
+</div>

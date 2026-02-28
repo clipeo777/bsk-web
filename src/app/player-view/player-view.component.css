@@ -1,0 +1,33 @@
+.player-view-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 24px;
+  border: 2px solid #1976d2;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(13,26,74,0.10);
+}
+.player-info {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.player-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #FF9800;
+  box-shadow: 0 2px 8px rgba(13,26,74,0.10);
+}
+.player-data {
+  flex: 1;
+  color: #0D1A4A;
+}
+h2 {
+  color: #1976d2;
+  text-align: center;
+}
+p {
+  font-size: 1.1em;
+}
