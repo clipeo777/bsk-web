@@ -1,10 +1,4 @@
-<nav class="menu-bar">
-  <a routerLink="/" routerLinkActive="active">Inicio</a>
-  <a routerLink="/fees" routerLinkActive="active">Cuotas</a>
-  <a routerLink="/attendance" routerLinkActive="active">Asistencias</a>
-  <a routerLink="/statistics" routerLinkActive="active">Estadísticas</a>
-  <a routerLink="/player-detail" routerLinkActive="active">Ficha Jugador</a>
-</nav>
-<hr>
+<ng-container *ngIf="!isPlayerViewPage">
+</ng-container>
 <router-outlet></router-outlet>
 

@@ -1,0 +1,19 @@
+<header class="intranet-header">
+  <div *ngIf="showBanner" class="banner-wrapper">
+    <img src="assets/images/baner_bsk.jpg" alt="Banner BSK" class="banner-img" />
+    <div class="banner-overlay"></div>
+    <div class="banner-content">
+      <span class="banner-pill">Berserkers</span>
+      <p class="banner-message">Intranet oficial · Gestión interna del club</p>
+    </div>
+  </div>
+  <nav class="menu-bar">
+    <div class="menu-inner">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
+      <a routerLink="/fees" routerLinkActive="active">Cuotas</a>
+      <a routerLink="/attendance" routerLinkActive="active">Asistencias</a>
+      <a routerLink="/statistics" routerLinkActive="active">Estadísticas</a>
+      <a routerLink="/player-detail" routerLinkActive="active">Ficha Jugador</a>
+    </div>
+  </nav>
+</header>

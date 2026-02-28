@@ -1,1 +1,255 @@
-/* You can add global styles to this file, and also import other style files */
+/* Estilos globales y fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+:root {
+	--color-primary: #d6a323;
+	--color-primary-bright: #f8d34b;
+	--color-primary-dark: #9c7912;
+	--color-secondary: #fef5d0;
+	--color-dark: #0f1015;
+	--color-dark-soft: #1a1c23;
+	--color-card: #1f2028;
+	--color-neutral: #d9dce6;
+	--color-muted: #9ea3b5;
+	--color-light: #f8f9fb;
+	/* Variables heredadas para compatibilidad */
+	--gold: var(--color-primary);
+	--black: var(--color-dark);
+	--gray: #2f333f;
+	--white: #ffffff;
+}
+
+body {
+	margin: 0;
+	font-family: "Poppins", "Segoe UI", sans-serif;
+	background-color: var(--color-dark);
+	color: var(--color-light);
+	min-height: 100vh;
+	letter-spacing: 0.02em;
+}
+
+a {
+	color: inherit;
+}
+
+.module-screen {
+	min-height: calc(100vh - 64px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 42px;
+	padding: 56px 32px 80px;
+	background: radial-gradient(circle at 12% 18%, rgba(214, 163, 35, 0.16), transparent 55%),
+		radial-gradient(circle at 88% 8%, rgba(255, 255, 255, 0.05), transparent 50%),
+		linear-gradient(160deg, rgba(10, 11, 16, 0.98) 0%, rgba(6, 7, 10, 1) 100%);
+}
+
+.module-header {
+	width: min(100%, 1100px);
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.module-header .module-tag {
+	align-self: flex-start;
+	padding: 6px 18px;
+	border-radius: 999px;
+	background: rgba(214, 163, 35, 0.18);
+	color: var(--color-primary-bright);
+	font-size: 0.75rem;
+	letter-spacing: 0.38em;
+	text-transform: uppercase;
+}
+
+.module-header h1 {
+	margin: 0;
+	font-size: clamp(1.9rem, 4vw, 2.6rem);
+	font-weight: 600;
+}
+
+.module-header p {
+	margin: 0;
+	max-width: 620px;
+	color: rgba(248, 245, 208, 0.8);
+}
+
+.module-summary,
+.module-actions,
+.module-content-block {
+	width: min(100%, 1100px);
+}
+
+.module-summary {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 20px;
+}
+
+.summary-card {
+	display: flex;
+	align-items: center;
+	gap: 18px;
+	padding: 26px 28px;
+	border-radius: 22px;
+	background: rgba(31, 32, 40, 0.92);
+	border: 1px solid rgba(214, 163, 35, 0.18);
+	box-shadow: 0 18px 46px rgba(0, 0, 0, 0.4);
+}
+
+.summary-card i {
+	font-size: 1.6rem;
+	color: var(--color-primary-bright);
+}
+
+.summary-card h3 {
+	margin: 0 0 6px;
+	font-size: 1.05rem;
+	font-weight: 600;
+}
+
+.summary-card p {
+	margin: 0;
+	color: rgba(237, 239, 244, 0.7);
+	font-size: 0.95rem;
+}
+
+.module-actions h2,
+.module-content-block > h2 {
+	margin-bottom: 18px;
+	font-size: 1.6rem;
+	font-weight: 600;
+}
+
+.action-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 18px;
+}
+
+.action-card {
+	display: flex;
+	align-items: flex-start;
+	gap: 16px;
+	padding: 22px;
+	border-radius: 18px;
+	background: rgba(25, 27, 34, 0.9);
+	border: 1px solid rgba(214, 163, 35, 0.18);
+	color: inherit;
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.action-card i {
+	font-size: 1.4rem;
+	color: var(--color-primary-bright);
+}
+
+.action-card .action-title {
+	display: block;
+	font-weight: 600;
+	margin-bottom: 4px;
+}
+
+.action-card span:last-child {
+	color: rgba(237, 239, 244, 0.68);
+	font-size: 0.92rem;
+}
+
+.action-card:hover {
+	transform: translateY(-4px);
+	border-color: rgba(214, 163, 35, 0.45);
+	box-shadow: 0 24px 56px rgba(0, 0, 0, 0.52);
+}
+
+.module-content-block {
+	padding: 32px 36px;
+	border-radius: 26px;
+	background: rgba(25, 27, 34, 0.92);
+	border: 1px solid rgba(214, 163, 35, 0.2);
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.module-content-block p {
+	color: rgba(237, 239, 244, 0.72);
+}
+
+.module-content-block h3 {
+	margin-top: 0;
+	color: var(--color-primary-bright);
+}
+
+.timeline {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+}
+
+.timeline li {
+	display: flex;
+	align-items: center;
+	gap: 18px;
+	padding: 18px 20px;
+	border-radius: 20px;
+	background: rgba(19, 20, 27, 0.92);
+	border: 1px solid rgba(214, 163, 35, 0.16);
+	box-shadow: 0 16px 44px rgba(0, 0, 0, 0.38);
+}
+
+.timeline-badge {
+	min-width: 86px;
+	padding: 12px 10px;
+	text-align: center;
+	border-radius: 14px;
+	background: rgba(214, 163, 35, 0.24);
+	color: var(--color-primary-bright);
+	font-weight: 600;
+	letter-spacing: 0.12em;
+}
+
+.timeline-info h3 {
+	margin: 0 0 6px;
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+
+.timeline-info p {
+	margin: 0;
+	color: rgba(237, 239, 244, 0.68);
+}
+
+@media (max-width: 768px) {
+	.module-screen {
+		padding: 48px 20px 64px;
+		gap: 36px;
+	}
+
+	.module-header .module-tag {
+		align-self: center;
+	}
+
+	.module-header {
+		text-align: center;
+		align-items: center;
+	}
+
+	.action-card {
+		align-items: center;
+	}
+}
+
+@media (max-width: 640px) {
+	.timeline li {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.timeline-badge {
+		min-width: unset;
+	}
+}

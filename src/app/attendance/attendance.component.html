@@ -1,4 +1,59 @@
-<div class="attendance-container">
-  <h2>Attendance Record</h2>
-  <p>Here you can register and check each player's attendance.</p>
+<app-header></app-header>
+<div class="module-screen attendance">
+  <header class="module-header">
+    <span class="module-tag">Control</span>
+    <h1>Asistencia del plantel</h1>
+    <p>Monitorea entrenamientos y partidos en tiempo real, detecta ausencias críticas y confirma la preparación del equipo.</p>
+  </header>
+
+  <section class="module-summary">
+    <article class="summary-card">
+      <i class="fa-solid fa-user-check"></i>
+      <div>
+        <h3>Promedio semanal</h3>
+        <p>92% de asistencia en los últimos 7 días</p>
+      </div>
+    </article>
+    <article class="summary-card">
+      <i class="fa-solid fa-person-running"></i>
+      <div>
+        <h3>Entrenamiento de hoy</h3>
+        <p>28 confirmados · 2 por confirmar</p>
+      </div>
+    </article>
+    <article class="summary-card">
+      <i class="fa-solid fa-calendar-day"></i>
+      <div>
+        <h3>Eventos programados</h3>
+        <p>3 sesiones esta semana · 1 scrimmage</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="module-content-block attendance-timeline">
+    <h2>Próximos registros</h2>
+    <ul class="timeline">
+      <li>
+        <div class="timeline-badge">28 FEB</div>
+        <div class="timeline-info">
+          <h3>Entrenamiento táctico · 18:00</h3>
+          <p>Confirmados: 30 · Faltantes: 3 · Responsable: Coach Martínez</p>
+        </div>
+      </li>
+      <li>
+        <div class="timeline-badge">01 MAR</div>
+        <div class="timeline-info">
+          <h3>Sesión de video · 20:00</h3>
+          <p>Confirmados: 24 · Faltantes: 6 · Responsable: Staff de análisis</p>
+        </div>
+      </li>
+      <li>
+        <div class="timeline-badge">02 MAR</div>
+        <div class="timeline-info">
+          <h3>Partido vs Thunderbolts · 19:30</h3>
+          <p>Roster completo confirmado · Check-in obligatorio 2 horas antes</p>
+        </div>
+      </li>
+    </ul>
+  </section>
 </div>

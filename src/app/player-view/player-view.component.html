@@ -1,17 +1,53 @@
-<div class="player-view-container" *ngIf="player">
-  <h2>Detalle del Jugador</h2>
-  <div class="player-info">
-    <img [src]="player.photo" alt="Foto del jugador" class="player-photo" />
-    <div class="player-data">
-      <p><strong>Nombre:</strong> {{ player.name }}</p>
-      <p><strong>Posición:</strong> {{ player.position }}</p>
-      <p><strong>Jersey:</strong> {{ player.jersey }}</p>
-      <p><strong>Talla del jersey:</strong> {{ player.jerseySize }}</p>
-      <p><strong>Fecha de nacimiento:</strong> {{ player.birthDate }}</p>
-      <p><strong>Fecha de ingreso:</strong> {{ player.joinDate }}</p>
+
+<app-header></app-header>
+<div class="module-screen player-profile" *ngIf="player; else notFound">
+  <header class="module-header">
+    <span class="module-tag">Ficha</span>
+    <h1>{{ player['B' + (player['A2'] ? 2 : '')] || player['B2'] || player['B'] }}</h1>
+    <p>Información clave para gestionar disponibilidad, contacto y seguimiento deportivo.</p>
+  </header>
+
+  <section class="profile-wrapper module-content-block">
+    <div class="profile-identity">
+      <div class="avatar">
+        <span>{{ (player['B' + (player['A2'] ? 2 : '')] || player['B2'] || player['B'] | slice:0:1) || 'B' }}</span>
+      </div>
+      <div class="identity-data">
+        <h2>#{{ player['E' + (player['A2'] ? 2 : '')] || player['E2'] || player['E'] }} · {{ player['G' + (player['A2'] ? 2 : '')] || player['G2'] || player['G'] }}</h2>
+        <p>{{ player['C' + (player['A2'] ? 2 : '')] || player['C2'] || player['C'] }}</p>
+        <span class="status-pill">Activo</span>
+      </div>
     </div>
+    <div class="profile-grid">
+      <article>
+        <h3>Contacto</h3>
+        <ul>
+          <li><strong>Teléfono:</strong> {{ player['D' + (player['A2'] ? 2 : '')] || player['D2'] || player['D'] }}</li>
+          <li><strong>Correo:</strong> {{ player['H' + (player['A2'] ? 2 : '')] || player['H2'] || player['H'] }}</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Perfil físico</h3>
+        <ul>
+          <li><strong>Talla:</strong> {{ player['F' + (player['A2'] ? 2 : '')] || player['F2'] || player['F'] }}</li>
+          <li><strong>Fecha de nacimiento:</strong> {{ player['I' + (player['A2'] ? 2 : '')] || player['I2'] || player['I'] }}</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Notas internas</h3>
+        <p>Agrega comentarios del staff para mantener seguimiento de salud, desempeño o compromisos específicos.</p>
+        <button type="button" class="ghost">Registrar nota</button>
+      </article>
+    </div>
+  </section>
+</div>
+
+<ng-template #notFound>
+  <div class="module-screen player-profile empty">
+    <header class="module-header">
+      <span class="module-tag">Ficha</span>
+      <h1>Jugador no encontrado</h1>
+      <p>No pudimos localizar la ficha solicitada. Verifica el enlace o regresa al listado principal.</p>
+    </header>
   </div>
-</div>
-<div *ngIf="!player">
-  <p>Jugador no encontrado.</p>
-</div>
+</ng-template>

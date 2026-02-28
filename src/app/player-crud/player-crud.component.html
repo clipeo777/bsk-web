@@ -1,30 +1,54 @@
-<div class="player-crud-container">
-  <h2>Registro de Nuevo Jugador</h2>
-  <form>
-    <label>Nombre:
-      <input type="text" name="name" />
-    </label>
-    <label>Posición:
-      <input type="text" name="position" />
-    </label>
-    <label>Jersey:
-      <input type="text" name="jersey" />
-    </label>
-    <label>Talla del jersey:
-      <input type="text" name="jerseySize" />
-    </label>
-    <label>Fecha de nacimiento:
-      <input type="date" name="birthDate" />
-    </label>
-    <label>Fecha de ingreso:
-      <input type="date" name="joinDate" />
-    </label>
-    <label>Foto:
-      <input type="url" name="photo" placeholder="URL de la foto" />
-    </label>
-    <div class="crud-actions">
-      <button type="submit">Guardar</button>
-      <button type="button" (click)="goBack()">Cancelar</button>
-    </div>
-  </form>
+<app-header></app-header>
+<div class="module-screen player-crud">
+  <header class="module-header">
+    <span class="module-tag">Roster</span>
+    <h1>Registro de nuevo jugador</h1>
+    <p>Completa la ficha base para integrar a un nuevo miembro del club y mantener la información actualizada.</p>
+  </header>
+
+  <section class="module-content-block crud-form-card">
+    <form class="crud-form">
+      <div class="form-row">
+        <label>Cédula
+          <input type="text" name="cedula" placeholder="Ej. 1234567890" />
+        </label>
+        <label>Nombres
+          <input type="text" name="nombres" placeholder="Ej. Juan Pérez" />
+        </label>
+      </div>
+      <div class="form-row">
+        <label>Número de contacto
+          <input type="text" name="contacto" placeholder="Ej. 09 9999 9999" />
+        </label>
+        <label># de Jersey
+          <input type="text" name="jersey" placeholder="Ej. 32" />
+        </label>
+      </div>
+      <div class="form-row">
+        <label>Talla
+          <input type="text" name="talla" placeholder="M / L / XL" />
+        </label>
+        <label>Posición
+          <input type="text" name="posicion" placeholder="RB, WR, LB..." />
+        </label>
+      </div>
+      <div class="form-row">
+        <label>e-mail
+          <input type="email" name="email" placeholder="correo@bsk.com" />
+        </label>
+        <label>Fecha de nacimiento
+          <input type="date" name="fechaNacimiento" />
+        </label>
+      </div>
+      <div class="form-row">
+        <label>Notas internas
+          <textarea name="notas" rows="3" placeholder="Observaciones médicas, compromisos, etc."></textarea>
+        </label>
+      </div>
+      <div class="crud-actions">
+        <button type="button" class="ghost" (click)="goBack()">Cancelar</button>
+        <button type="submit" class="primary">Guardar jugador</button>
+      </div>
+    </form>
+  </section>
 </div>

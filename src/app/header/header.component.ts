@@ -3,20 +3,19 @@ import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
 })
-export class AppComponent {
-  title = 'bsk-web';
-  isPlayerViewPage = false;
+export class HeaderComponent {
+  showBanner = true;
 
   constructor(private router: Router) {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: any) => {
-      // Solo oculta banner y menú en la ruta exacta /player/:id
-      this.isPlayerViewPage = /^\/player\/[\d]+$/.test(event.urlAfterRedirects);
+      const url = event.urlAfterRedirects;
+      this.showBanner = !(url === '/player-detail' || /^\/player\/[\w-]+$/.test(url));
     });
   }
 }

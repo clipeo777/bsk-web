@@ -1,64 +1,114 @@
 body {
-  background: #0D1A4A;
-  color: #fff;
+  background: var(--black);
+  color: var(--white);
   font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 /* Basic styles for the navigation bar */
+/* Menú principal con predominancia dorada */
 .menu-bar {
   display: flex;
   gap: 20px;
-  background: #0D1A4A;
+  background: var(--gold);
   padding: 10px 20px;
   border-radius: 0 0 12px 12px;
-  box-shadow: 0 2px 8px rgba(13,26,74,0.15);
+  box-shadow: 0 2px 8px rgba(24,24,24,0.15);
+  position: static;
+  width: 100%;
+  z-index: auto;
+  top: auto;
+  left: auto;
 }
+/* Links en negro y dorado */
 .menu-bar a {
-  color: #fff;
+  color: var(--black);
   text-decoration: none;
   font-weight: bold;
   padding: 8px 16px;
   border-radius: 6px;
-  transition: background 0.2s;
+  transition: background 0.2s, color 0.2s;
 }
 .menu-bar a.active, .menu-bar a:hover {
-  background: #1976d2;
-  color: #fff;
+  background: var(--black);
+  color: var(--gold);
 }
 hr {
   margin: 0;
   border: none;
-  border-top: 2px solid #FF9800;
+  border-top: 2px solid var(--gold);
+  position: static;
+  width: 100%;
+  z-index: auto;
+  top: auto;
+  left: auto;
+}
+
+/* Banner superior (no fijo, versión inicial) */
+.banner-container {
+  width: 100%;
+  background: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-bottom: 0;
+  height: auto;
+  overflow: hidden;
+  position: static;
+}
+.banner-img {
+  width: 100%;
+  max-height: 300px;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 4px solid var(--gold);
+  display: block;
 }
 
 /* Ajuste para layout general */
+/* Layout general con predominancia gris y blanco */
 .players-module-layout, .main-content, .sidebar-filter {
-  background: #fff;
-  color: #0D1A4A;
+  background: var(--white);
+  color: var(--black);
 }
 .sidebar-filter {
-  border: 2px solid #1976d2;
+  border: 2px solid var(--gray);
 }
+/* Botón Nuevo dorado */
 .header .new-btn {
-  background: #FF9800;
-  color: #fff;
+  background: var(--gold);
+  color: var(--black);
   border: none;
   border-radius: 6px;
   padding: 8px 18px;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(13,26,74,0.10);
+  box-shadow: 0 2px 8px rgba(24,24,24,0.10);
 }
+/* Tabla con encabezado dorado y filas alternas gris/blanco */
 .players-table th {
-  background: #1976d2;
-  color: #fff;
+  background: var(--gold);
+  color: var(--black);
 }
 .players-table tr:nth-child(even) {
-  background: #f5f5f5;
+  background: var(--gray);
 }
 .players-table td {
-  border-bottom: 1px solid #FF9800;
+  border-bottom: 1px solid var(--gold);
 }
 .player-photo {
-  border: 3px solid #FF9800;
+  border: 3px solid var(--gold);
+}
+
+/* Ajustar el contenido para dejar espacio al banner y menú */
+:host ::ng-deep router-outlet ~ * {
+  margin-top: 0 !important;
+}
+
+.main-content, .players-module-layout {
+  margin-top: 0 !important;
+}
+
+body {
+  overflow-x: hidden;
 }

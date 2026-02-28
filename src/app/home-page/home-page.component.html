@@ -1,4 +1,129 @@
-<div class="home-page-container">
-  <h1>Main Screen</h1>
-  <p>Welcome to the main screen of the project.</p>
+
+
+<app-header></app-header>
+<div class="home-page intranet">
+  <section class="hero">
+    <div class="hero-emblem">
+      <div class="emblem-glow"></div>
+      <div class="emblem-frame">
+        <img src="assets/images/logo.png" alt="Logo BSK" class="team-logo" />
+      </div>
+      <span class="emblem-caption">Berserkers</span>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <div>
+          <span class="badge-label">Berserkers Football</span>
+          <span class="badge-subtitle">Intranet oficial</span>
+        </div>
+      </div>
+      <h1>Panel de gestión BSK</h1>
+      <p class="subtitle">Bienvenido a la intranet del club. Administra tu organización con herramientas pensadas para la operación diaria.</p>
+      <p class="hero-motto">Fuerza, estrategia y disciplina vikinga al servicio del equipo.</p>
+      <div class="hero-metrics">
+        <div class="metric-card">
+          <span class="metric-label">Actualización</span>
+          <span class="metric-value">Feb 2026</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-label">Miembros activos</span>
+          <span class="metric-value">120+</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-label">Próximo partido</span>
+          <span class="metric-value">02 · Mar · 2026</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-highlight">
+      <span class="highlight-label">Orden del Berserker</span>
+      <h3>Prioridad táctica</h3>
+      <p>Confirma la asistencia del plantel y revisa las cuotas pendientes antes del entrenamiento.</p>
+      <ul class="highlight-list">
+        <li>Verifica disponibilidad de titulares y suplentes.</li>
+        <li>Revisa alertas de cuotas antes de la reunión técnica.</li>
+        <li>Actualiza reporte físico tras el entrenamiento nocturno.</li>
+      </ul>
+      <button class="cta-btn" type="button" routerLink="/attendance">
+        <span>Ir a asistencias</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <section class="quick-actions">
+    <div class="section-header">
+      <h2>Acciones del cuartel</h2>
+      <p>Gestiona los módulos clave del club con la precisión de un escuadrón berserker.</p>
+    </div>
+    <div class="panel-grid">
+      <a class="panel" routerLink="/player-detail">
+        <i class="fa-solid fa-users panel-icon"></i>
+        <div>
+          <span class="panel-title">Jugadores</span>
+          <span class="panel-description">Gestiona altas, bajas y fichas técnicas.</span>
+        </div>
+      </a>
+      <a class="panel" routerLink="/fees">
+        <i class="fa-solid fa-money-bill-wave panel-icon"></i>
+        <div>
+          <span class="panel-title">Cuotas</span>
+          <span class="panel-description">Controla pagos, vencimientos y recordatorios.</span>
+        </div>
+      </a>
+      <a class="panel" routerLink="/attendance">
+        <i class="fa-solid fa-calendar-check panel-icon"></i>
+        <div>
+          <span class="panel-title">Asistencias</span>
+          <span class="panel-description">Registra entrenamientos y partidos en segundos.</span>
+        </div>
+      </a>
+      <a class="panel" routerLink="/statistics">
+        <i class="fa-solid fa-chart-line panel-icon"></i>
+        <div>
+          <span class="panel-title">Estadísticas</span>
+          <span class="panel-description">Visualiza métricas de rendimiento y evolución.</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="internal-notices">
+    <div class="section-header">
+      <div>
+        <span class="section-pill">Comunicados</span>
+        <h2>Avisos internos</h2>
+      </div>
+      <span class="section-meta">Última sincronización: hace 2 horas</span>
+    </div>
+    <ul class="notice-list">
+      <li>
+        <div class="notice-icon">
+          <i class="fa-solid fa-handshake"></i>
+        </div>
+        <div>
+          <p class="notice-title">Reunión de staff</p>
+          <p class="notice-detail">28/02/2026 · 18:00 · Sala táctica</p>
+        </div>
+      </li>
+      <li>
+        <div class="notice-icon">
+          <i class="fa-solid fa-receipt"></i>
+        </div>
+        <div>
+          <p class="notice-title">Actualización de cuotas</p>
+          <p class="notice-detail">Disponible en el módulo correspondiente con nuevos filtros.</p>
+        </div>
+      </li>
+      <li>
+        <div class="notice-icon">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <div>
+          <p class="notice-title">Próximo partido</p>
+          <p class="notice-detail">02/03/2026 · vs Thunderbolts · Confirmar alineación el 29/02.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
 </div>
